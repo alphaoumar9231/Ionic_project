@@ -1,20 +1,23 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="medium">
+    <ion-thumbnail slot="start">
+      <img src="../../assets/images/logo.png" >
+    </ion-thumbnail>
     <ion-title>
-      Blank
+      Products Management
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" id="body">
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>Bienvenue sur Products Management</strong>
+    <p>Une application de gestion de stockage</p>
+  </div>
+  <div class="abonne">
+    <ion-button color="primary" href="/registre" class="btn2" expand="block" shape="round">Inscription</ion-button>
+    <br>
+    <ion-button color="success" href="/login" class="btn1" expand="block" shape="round" >Connexion</ion-button>
   </div>
 </ion-content>

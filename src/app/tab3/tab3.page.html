@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-thumbnail slot="start">
+      <img src="../../assets/images/logo.png">
+    </ion-thumbnail>
+    <ion-title>Products Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-item>
+        <ion-img src="../../assets/images/avatar.png"></ion-img>
+      </ion-item>
+    </ion-card-header>
+  
+    <ion-card-content *ngFor="let donnee of userData">
+      <ion-card-title>{{donnee.prenom}} {{donnee.nom}}</ion-card-title>
+      <ion-card-subtitle>Email : <span>{{donnee.email}}</span></ion-card-subtitle>
+    </ion-card-content>
+  </ion-card>
+  <p class="btn">
+    <ion-button (click)="deconnexion()"  color="danger">Deconnexion</ion-button>
+  </p>
+</ion-content>

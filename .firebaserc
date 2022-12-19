@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ionicprojet-641e5": {
+      "hosting": {
+        "app": [
+          "ionicprojet-641e5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ionicprojet-641e5"
+  }
+}

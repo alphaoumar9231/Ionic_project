@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-thumbnail slot="start">
+      <img src="../../assets/images/logo.png">
+    </ion-thumbnail>
+    <ion-title>Products Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content class="ion-padding">
+    <div class="divTitle">
+      <p class="title">Connectez-vous!</p> 
+    </div>
+    <form (ngSubmit)="login()" [formGroup]="credentials">
+      <ion-item >
+        <ion-label color="light">Email</ion-label>
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+        <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors"
+          >Email is invalid</ion-note
+        >
+      </ion-item>
+      <ion-item >
+        <ion-label color="light">Mot de passe</ion-label>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors"
+          >Password needs to be 6 characters</ion-note
+        >
+      </ion-item>
+  
+      <ion-button type="submit" color="success" class="btn" expand="block" shape="round" [disabled]="!credentials.valid">Connexion</ion-button>
+    </form>
+    <div class="inscription">
+      Vous n'avez pas de compte <a href="/registre">Inscrivez-vous</a>
+    </div>
+  </ion-content>
+</ion-content>

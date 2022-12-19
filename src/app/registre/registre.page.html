@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-thumbnail slot="start">
+      <img src="../../assets/images/logo.png">
+    </ion-thumbnail>
+    <ion-title>Products Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+
+  <ion-content class="ion-padding">
+    <form (ngSubmit)="registre()" [formGroup]="credentials">
+      <ion-item>
+        <ion-label color="light">Nom</ion-label>
+        <ion-input type="text" placeholder="Votre nom" formControlName="nom"></ion-input> 
+        <ion-note slot="error" *ngIf="(nom.dirty ||prenom.touched) && nom.errors">
+          Le nom est obligatoire
+        </ion-note>     
+      </ion-item>
+      <ion-item>
+        <ion-label color="light">Prénom</ion-label>
+        <ion-input type="text" placeholder="Votre prenom" formControlName="prenom"></ion-input>
+        <ion-note slot="error" *ngIf="(prenom.dirty || prenom.touched) && prenom.errors">
+          Le prenom est obligatoire
+        </ion-note>
+      </ion-item>
+
+      <ion-item fill="solid" class="ion-margin-bottom">
+        <ion-label color="light">Email</ion-label>
+        <ion-input type="email" placeholder="Votre email" formControlName="email"></ion-input>
+        <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">
+          Email is invalid
+        </ion-note>
+      </ion-item>
+      <ion-item fill="solid" class="ion-margin-bottom">
+        <ion-label color="light">Mot de passe</ion-label>
+        <ion-input type="password" placeholder="Mot de passe" formControlName="password"></ion-input>
+        <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">
+          Password needs to be 6 characters
+        </ion-note>
+      </ion-item>
+  
+      <ion-button type="submit" color="blue" class="btn" expand="block" [disabled]="!credentials.valid">Inscription</ion-button>
+    </form>
+    <div class="connexion">
+      Vous avez déja un compte <a href="/connexion">Connectez-vous</a>
+    </div>
+</ion-content>
+

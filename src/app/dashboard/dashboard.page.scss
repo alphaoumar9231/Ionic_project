@@ -1,0 +1,12 @@
+ion-tab-button ion-icon {
+    color: white;
+}
+ion-tab-button ion-label {
+    color: white;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+ion-tab-button ion-icon:hover, ion-tab-button ion-label:hover{
+    color: rgb(190, 185, 185);
+}

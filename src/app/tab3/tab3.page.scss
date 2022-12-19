@@ -1,0 +1,21 @@
+ion-content {
+    --ion-background-color: linear-gradient(to top, #1d6771 0%, #71ceda 100%);  color: #FFF;  
+}
+.btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn ion-button{
+	font-weight: 800;
+}
+ion-card-title{
+	color: #FFF;
+}
+ion-card-subtitle{
+	color: #FFF;
+	font-size: 20px;
+}
+span{
+	text-transform: lowercase !important;
+}

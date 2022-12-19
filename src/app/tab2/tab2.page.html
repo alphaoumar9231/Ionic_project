@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-thumbnail slot="start">
+      <img src="../../assets/images/logo.png">
+    </ion-thumbnail>
+    <ion-title>Products Management</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form (ngSubmit)="addPrd()" [formGroup]="credentials">
+    <ion-item>
+      <ion-label color="light">Catégorie</ion-label>
+      <ion-select placeholder="Catégorie" class="ion-text-center" formControlName="categorie">
+        <ion-select-option value="riz">Riz</ion-select-option>
+        <ion-select-option value="huile">Huile</ion-select-option>
+        <ion-select-option value="lait">lait</ion-select-option>
+        <ion-select-option value="sucre">Sucre</ion-select-option>
+      </ion-select>
+      <ion-note slot="error" *ngIf="(categorie.dirty || categorie.touched) && categorie.errors"></ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="light">Nom</ion-label>
+      <ion-input color="light" type="text"  required placeholder="Nom du produit" formControlName="nom"></ion-input >
+        <ion-note slot="error" *ngIf="(nom.dirty || nom.touched) && nom.errors"></ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="light">Quantite</ion-label>
+      <ion-input color="light" type="number"  required placeholder="Quantite" formControlName="quantite" ></ion-input>
+      <ion-note slot="error" *ngIf="(quantite.dirty || quantite.touched) && quantite.errors"></ion-note>
+    </ion-item>
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-label color="light">date</ion-label>
+      <ion-input type="date" placeholder="Date" formControlName="date" ></ion-input>
+      <ion-note slot="error" *ngIf="(date.dirty || date.touched) && date.errors"></ion-note> 
+    </ion-item>
+    
+    <ion-button type="submit" color="primary" class="btn" expand="block" [disabled]="!credentials.valid">Ajouter</ion-button>
+  
+  </form>
+</ion-content>

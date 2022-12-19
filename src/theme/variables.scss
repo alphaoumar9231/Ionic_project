@@ -60,7 +60,7 @@
   --ion-color-dark-tint: #383a3e;
 
   /** medium **/
-  --ion-color-medium: #92949c;
+  --ion-color-medium: #1d6771;
   --ion-color-medium-rgb: 146, 148, 156;
   --ion-color-medium-contrast: #ffffff;
   --ion-color-medium-contrast-rgb: 255, 255, 255;
@@ -74,6 +74,58 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  // mon couleur prefere 
+  --ion-color-mycolor: #0c454d;
+	--ion-color-mycolor-rgb: 29,103,113;
+	--ion-color-mycolor-contrast: #ffffff;
+	--ion-color-mycolor-contrast-rgb: 255,255,255;
+	--ion-color-mycolor-shade: #1a5b63;
+	--ion-color-mycolor-tint: #34767f;
+
+  // bleu
+  --ion-color-blue: #047bf9;
+	--ion-color-blue-rgb: 13,129,253;
+	--ion-color-blue-contrast: #ffffff;
+	--ion-color-blue-contrast-rgb: 255,255,255;
+	--ion-color-blue-shade: #0b72df;
+	--ion-color-blue-tint: #258efd;
+
+  // logo
+  --ion-color-logo: #0e6f7b;
+	--ion-color-logo-rgb: 29,103,113;
+	--ion-color-logo-contrast: #ffffff;
+	--ion-color-logo-contrast-rgb: 255,255,255;
+	--ion-color-logo-shade: #126a76;
+	--ion-color-logo-tint: #1a7f8c;
+
+}
+
+.ion-color-mycolor {
+	--ion-color-base: var(--ion-color-mycolor);
+	--ion-color-base-rgb: var(--ion-color-mycolor-rgb);
+	--ion-color-contrast: var(--ion-color-mycolor-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-mycolor-contrast-rgb);
+	--ion-color-shade: var(--ion-color-mycolor-shade);
+	--ion-color-tint: var(--ion-color-mycolor-tint);
+}
+
+.ion-color-blue {
+	--ion-color-base: var(--ion-color-blue);
+	--ion-color-base-rgb: var(--ion-color-blue-rgb);
+	--ion-color-contrast: var(--ion-color-blue-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-blue-contrast-rgb);
+	--ion-color-shade: var(--ion-color-blue-shade);
+	--ion-color-tint: var(--ion-color-blue-tint);
+}
+
+.ion-color-logo {
+	--ion-color-base: var(--ion-color-logo);
+	--ion-color-base-rgb: var(--ion-color-logo-rgb);
+	--ion-color-contrast: var(--ion-color-logo-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-logor-contrast-rgb);
+	--ion-color-shade: var(--ion-color-logo-shade);
+	--ion-color-tint: var(--ion-color-logo-tint);
 }
 
 @media (prefers-color-scheme: dark) {
